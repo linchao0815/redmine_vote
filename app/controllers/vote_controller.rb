@@ -1,9 +1,9 @@
 class VoteController < ApplicationController
   unloadable
 
-  before_filter :require_login
-  before_filter :find_user #, :authorize
-  before_filter :init_votes
+  before_action :require_login
+  before_action :find_user #, :authorize
+  before_action :init_votes
 
   MAX_VOTELIST = 5
 

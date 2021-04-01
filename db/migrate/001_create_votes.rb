@@ -1,4 +1,4 @@
-class CreateVotes < ActiveRecord::Migration
+class CreateVotes < Rails.version < '5.1' ? ActiveRecord::Migration : ActiveRecord::Migration[4.2]
   def change
     create_table :votes do |t|
       t.integer :message_id
